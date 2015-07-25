@@ -16,7 +16,7 @@
 
 ;; make more packages available with the package installer
 (setq to-install
-      '(python-mode autopair auto-complete flycheck jedi fill-column-indicator smooth-scrolling flx-ido projectile workgroups ipython ein heroku-theme auctex))
+      '(python-mode autopair auto-complete flycheck jedi fill-column-indicator smooth-scrolling flx-ido projectile workgroups ipython ein heroku-theme tango-plus-theme auctex))
 (mapc 'install-if-needed to-install)
 
 (require 'autopair)
@@ -86,11 +86,6 @@
 (add-hook 'LaTeX-mode-hook 'turn-on-auto-fill) 
 (add-hook 'LaTeX-mode-hook (lambda () (abbrev-mode +1))) 
 (server-start)
-
-
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
 
 ;; FROM: http://www.emacswiki.org/emacs/TN
 (require 'tex-buf)
@@ -188,14 +183,6 @@ If there is still something left do do start the next latex-command."
          (local-set-key (kbd "C-x C-s") 'TeX-save-and-texify))))
 
 
-
-
-
-
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-
 ;;;; Jedi settings
 (require 'jedi)
 ;; if you need to change your python intepreter, if you want to change it
@@ -291,6 +278,11 @@ If there is still something left do do start the next latex-command."
 (define-key isearch-mode-map "\C-h" 'isearch-delete-char)
 (global-set-key [f6] 'help-command)
 
+;; color theme
+(load-theme 'tango-plus t)
+;;(load-theme 'heroku t)
+
+
 ;;-------------------- custom settings --------------------
 
 (custom-set-variables
@@ -314,14 +306,10 @@ If there is still something left do do start the next latex-command."
      (output-dvi "xdvi")
      (output-pdf "Sumatra PDF")
      (output-html "xdg-open"))))
- '(ansi-color-names-vector
-   ["#3F3F3F" "#CC9393" "#7F9F7F" "#F0DFAF" "#8CD0D3" "#DC8CC3" "#93E0E3" "#DCDCCC"])
  '(blink-cursor-mode nil)
- '(custom-enabled-themes (quote (heroku)))
  '(custom-safe-themes
    (quote
-    ("4f2ede02b3324c2f788f4e0bad77f7ebc1874eff7971d2a2c9b9724a50fb3f65" "eafda598b275a9d68cc1fbe1689925f503cab719ee16be23b10a9f2cc5872069" "bfbe39eae84983ca5c3ad6c9ccccd23d6e324e124b825721c20e3062ebc663bd" "95a6ac1b01dcaed4175946b581461e16e1b909d354ada79770c0821e491067c6" default)))
- '(fci-rule-color "#383838")
+    ("95a6ac1b01dcaed4175946b581461e16e1b909d354ada79770c0821e491067c6" "4f2ede02b3324c2f788f4e0bad77f7ebc1874eff7971d2a2c9b9724a50fb3f65" "9cb6358979981949d1ae9da907a5d38fb6cde1776e8956a1db150925f2dad6c1" default)))
  '(inhibit-startup-screen t)
  '(initial-buffer-choice "/cygdrive/c/Users/slahaie/Projects/projects.org")
  '(initial-frame-alist (quote ((vertical-scroll-bars) (fullscreen . maximized))))
@@ -330,29 +318,8 @@ If there is still something left do do start the next latex-command."
  '(py-set-fill-column-p t)
  '(scroll-bar-mode nil)
  '(tool-bar-mode nil)
- '(tooltip-mode nil)
- '(vc-annotate-background "#2B2B2B")
- '(vc-annotate-color-map
-   (quote
-    ((20 . "#BC8383")
-     (40 . "#CC9393")
-     (60 . "#DFAF8F")
-     (80 . "#D0BF8F")
-     (100 . "#E0CF9F")
-     (120 . "#F0DFAF")
-     (140 . "#5F7F5F")
-     (160 . "#7F9F7F")
-     (180 . "#8FB28F")
-     (200 . "#9FC59F")
-     (220 . "#AFD8AF")
-     (240 . "#BFEBBF")
-     (260 . "#93E0E3")
-     (280 . "#6CA0A3")
-     (300 . "#7CB8BB")
-     (320 . "#8CD0D3")
-     (340 . "#94BFF3")
-     (360 . "#DC8CC3"))))
- '(vc-annotate-very-old-color "#DC8CC3"))
+ '(tooltip-mode nil))
+
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
