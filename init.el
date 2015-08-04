@@ -26,6 +26,7 @@
 	flx-ido
 	workgroups
 	projectile
+	ein
 	tango-plus-theme
 	stekene-theme
 	heroku-theme))
