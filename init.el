@@ -16,7 +16,7 @@
 
 ;; make more packages available with the package installer
 (setq to-install
-      '(python-mode autopair auto-complete flycheck jedi fill-column-indicator smooth-scrolling flx-ido projectile workgroups ipython ein heroku-theme tango-plus-theme auctex))
+      '(python-mode autopair auto-complete flycheck jedi fill-column-indicator smooth-scrolling flx-ido projectile workgroups ipython ein heroku-theme tango-plus-theme stekene-theme auctex ess))
 (mapc 'install-if-needed to-install)
 
 (require 'autopair)
@@ -69,6 +69,9 @@
 ;;;; Ipython notebook
 (require 'ein)
 (setq ein:use-auto-complete t)
+
+;;;; ESS (Emacs Speaks Statistics)
+(require 'ess)
 
 ;;;; AUCTeX
 
@@ -227,7 +230,7 @@ If there is still something left do do start the next latex-command."
     
     ;; By default use the Windows HOME.
     ;; Otherwise, uncomment below to set a HOME
-    (setenv "HOME" (concat cygwin-root "/home/eric"))
+    (setenv "HOME" (concat cygwin-root "/home/slahaie"))
     
     ;; NT-emacs assumes a Windows shell. Change to bash.
     (setq shell-file-name "bash")
@@ -281,7 +284,7 @@ If there is still something left do do start the next latex-command."
 ;; color theme
 (load-theme 'tango-plus t)
 ;;(load-theme 'heroku t)
-
+;;(load-theme 'stekene-light t)
 
 ;;-------------------- custom settings --------------------
 
@@ -309,7 +312,21 @@ If there is still something left do do start the next latex-command."
  '(blink-cursor-mode nil)
  '(custom-safe-themes
    (quote
-    ("95a6ac1b01dcaed4175946b581461e16e1b909d354ada79770c0821e491067c6" "4f2ede02b3324c2f788f4e0bad77f7ebc1874eff7971d2a2c9b9724a50fb3f65" "9cb6358979981949d1ae9da907a5d38fb6cde1776e8956a1db150925f2dad6c1" default)))
+    ("bac3f5378bc938e96315059cd0488d6ef7a365bae73dac2ff6698960df90552d" "2916d16e583c17bb2a1a9d231ea8ddcb3577f8cb97179eea689e91036213ff03" "95a6ac1b01dcaed4175946b581461e16e1b909d354ada79770c0821e491067c6" "4f2ede02b3324c2f788f4e0bad77f7ebc1874eff7971d2a2c9b9724a50fb3f65" "9cb6358979981949d1ae9da907a5d38fb6cde1776e8956a1db150925f2dad6c1" default)))
+ '(ess-R-font-lock-keywords
+   (quote
+    ((ess-R-fl-keyword:modifiers . t)
+     (ess-R-fl-keyword:fun-defs . t)
+     (ess-R-fl-keyword:keywords . t)
+     (ess-R-fl-keyword:assign-ops . t)
+     (ess-R-fl-keyword:constants . t)
+     (ess-fl-keyword:fun-calls . t)
+     (ess-fl-keyword:numbers)
+     (ess-fl-keyword:operators)
+     (ess-fl-keyword:delimiters)
+     (ess-fl-keyword:=)
+     (ess-R-fl-keyword:F&T)
+     (ess-R-fl-keyword:%op%))))
  '(inhibit-startup-screen t)
  '(initial-buffer-choice "/cygdrive/c/Users/slahaie/Projects/projects.org")
  '(initial-frame-alist (quote ((vertical-scroll-bars) (fullscreen . maximized))))
