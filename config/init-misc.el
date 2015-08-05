@@ -1,5 +1,5 @@
 ;; initial buffer
-(setq initial-buffer-choice "C:/Users/Sebastien/Projects/projects.org")
+(setq initial-buffer-choice "~/Projects/projects.org")
 
 ;; flx ido
 (require 'flx-ido)
@@ -13,7 +13,8 @@
 ;; workgroups
 (require 'workgroups)
 (workgroups-mode 1)
-;;(wg-load "/path/to/saved/workgroups")
+(setq wg-switch-on-load nil)
+(wg-load "C:/Users/Sebastien/.emacs.d/workgroups")
 (setq wg-morph-on nil)
 
 ;; window switching
@@ -47,5 +48,5 @@
 
 ;; color theme
 (load-theme 'tango-plus t)
-;;(load-theme 'heroku t)
-;;(load-theme 'stekene-light t)
+;(load-theme 'heroku t)
+;(load-theme 'stekene-light t)
