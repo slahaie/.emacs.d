@@ -14,7 +14,7 @@
 (require 'workgroups)
 (workgroups-mode 1)
 (setq wg-switch-on-load nil)
-(wg-load "C:/Users/Sebastien/.emacs.d/workgroups")
+(wg-load "~/.emacs.d/workgroups")
 (setq wg-morph-on nil)
 
 ;; window switching

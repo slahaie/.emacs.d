@@ -6,4 +6,4 @@
 
 (defun proj ()
   (interactive)
-  (find-file "C:/Users/Sebastien/Projects/projects.org"))
+  (find-file "~/Projects/projects.org"))
