@@ -2,5 +2,6 @@
 /eshell
 /auto-save-list
 /server
+workgroups
 ido.*
 ac-comphist.*
