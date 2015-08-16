@@ -26,6 +26,7 @@
 	flx-ido
 	workgroups
 	projectile
+	magit
 	ein
 	tango-plus-theme
 	stekene-theme
