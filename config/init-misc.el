@@ -25,6 +25,9 @@
   (interactive)
   (other-window -1))
 
+;; magit status buffer
+(global-set-key (kbd "C-x g") 'magit-status)
+
 ;; smooth scrolling
 (require 'smooth-scrolling)
 (setq smooth-scroll-margin 5)
