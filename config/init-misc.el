@@ -17,6 +17,9 @@
 (wg-load "~/.emacs.d/workgroups")
 (setq wg-morph-on nil)
 
+;; so sentence forward and backward don't rely on double spaces
+(setq sentence-end-double-space nil)
+
 ;; window switching
 (global-set-key (kbd "C-.") 'other-window)
 (global-set-key (kbd "C-,") 'prev-window)
