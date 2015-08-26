@@ -32,7 +32,7 @@
 	stekene-theme
 	solarized-theme
 	heroku-theme))
-;;(mapc 'install-if-needed to-install)
+(mapc 'install-if-needed to-install)
 
 
 (add-to-list 'load-path "~/.emacs.d/config/")
