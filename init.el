@@ -28,6 +28,7 @@
 	projectile
 	magit
 	ein
+	markdown-mode
 	tango-plus-theme
 	stekene-theme
 	solarized-theme
