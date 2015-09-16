@@ -1,5 +1,18 @@
 ;; initial buffer
-(setq initial-buffer-choice "~/Projects/projects.org")
+;;(setq initial-buffer-choice "~/Projects/projects.org")
+
+;; layout definition
+(defun my-startup-layout ()
+ (interactive)
+ (delete-other-windows)
+ (split-window-horizontally) ;; -> |
+ (next-multiframe-window)
+ (find-file "~/Projects/projects.org")
+ (next-multiframe-window)
+ (find-file "~/Projects/gtd.org")
+)
+;; execute the layout
+(my-startup-layout )
 
 ;; flx ido
 (require 'flx-ido)
