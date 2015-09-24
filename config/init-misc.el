@@ -10,9 +10,10 @@
  (find-file "~/Projects/projects.org")
  (next-multiframe-window)
  (find-file "~/Projects/gtd.org")
+ (next-multiframe-window)
 )
 ;; execute the layout
-(my-startup-layout )
+(my-startup-layout)
 
 ;; flx ido
 (require 'flx-ido)
