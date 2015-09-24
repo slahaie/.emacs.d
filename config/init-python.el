@@ -17,5 +17,5 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (require 'ein)
 (setq ein:use-auto-complete t)
-(setq ein:complete-on-dot t)
+(setq ein:complete-on-dot nil)
 (add-hook 'ein:connect-mode-hook 'ein:jedi-setup)
