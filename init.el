@@ -29,6 +29,7 @@
 	magit
 	ein
 	markdown-mode
+	gscholar-bibtex
 	tango-plus-theme
 	stekene-theme
 	solarized-theme

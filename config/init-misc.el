@@ -79,3 +79,5 @@
 (add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
 (add-to-list 'auto-mode-alist '("README\\.md\\'" . gfm-mode))
 
+;; google scholar
+(setq gscholar-bibtex-default-source "Google Scholar")
