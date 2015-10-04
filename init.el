@@ -29,6 +29,7 @@
 	magit
 	ein
 	markdown-mode
+	google-this
 	tango-plus-theme
 	stekene-theme
 	solarized-theme
