@@ -30,6 +30,7 @@
 	ein
 	markdown-mode
 	gscholar-bibtex
+	google-this
 	tango-plus-theme
 	stekene-theme
 	solarized-theme

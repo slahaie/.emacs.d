@@ -79,5 +79,10 @@
 (add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
 (add-to-list 'auto-mode-alist '("README\\.md\\'" . gfm-mode))
 
+
 ;; google scholar
 (setq gscholar-bibtex-default-source "Google Scholar")
+
+;; google searches
+(google-this-mode 1)
+(global-set-key (kbd "C-x C-g") 'google-this-mode-submap)
