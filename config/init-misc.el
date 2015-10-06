@@ -86,3 +86,7 @@
 ;; google searches
 (google-this-mode 1)
 (global-set-key (kbd "C-x C-g") 'google-this-mode-submap)
+
+;; short yes or no query
+(defalias 'yes-or-no-p 'y-or-n-p)
+
