@@ -1,19 +1,19 @@
 ;; initial buffer
 ;;(setq initial-buffer-choice "~/Projects/projects.org")
 
-;; layout definition
-(defun my-startup-layout ()
- (interactive)
- (delete-other-windows)
- (split-window-horizontally) ;; -> |
- (next-multiframe-window)
- (find-file "~/Projects/projects.org")
- (next-multiframe-window)
- (find-file "~/Projects/gtd.org")
- (next-multiframe-window)
-)
-;; execute the layout
-(my-startup-layout)
+;; ;; layout definition
+;; (defun my-startup-layout ()
+;;  (interactive)
+;;  (delete-other-windows)
+;;  (split-window-horizontally) ;; -> |
+;;  (next-multiframe-window)
+;;  (find-file "~/Projects/projects.org")
+;;  (next-multiframe-window)
+;;  (find-file "~/Projects/gtd.org")
+;;  (next-multiframe-window)
+;; )
+;; ;; execute the layout
+;; (my-startup-layout)
 
 ;; flx ido
 (require 'flx-ido)
@@ -23,13 +23,6 @@
 ;; disable ido faces to see flx highlights.
 (setq ido-enable-flex-matching t)
 (setq ido-use-faces nil)
-
-;; workgroups
-(require 'workgroups)
-(workgroups-mode 1)
-(setq wg-switch-on-load nil)
-(wg-load "~/.emacs.d/workgroups")
-(setq wg-morph-on nil)
 
 ;; so sentence forward and backward don't rely on double spaces
 (setq sentence-end-double-space nil)
@@ -100,4 +93,15 @@
 (add-hook 'text-mode-hook 'remove-dos-eol)
 (add-hook 'emacs-lisp-mode-hook 'remove-dos-eol)
 
+;; workgroups
+(require 'workgroups2)
+(setq wg-emacs-exit-save-behavior 'ask)
+(setq wg-load-last-workgroup nil)
+(setq wg-open-this-wg "gtd")
+(setq wg-prefix-key (kbd "C-z"))
+(setq wg-session-load-on-start t)
+(workgroups-mode 1)
+;; (setq wg-switch-on-load nil)
+;; (wg-load "~/.emacs.d/workgroups")
+;; (setq wg-morph-on nil)
 

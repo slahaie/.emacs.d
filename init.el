@@ -24,7 +24,7 @@
 	fill-column-indicator
 	smooth-scrolling
 	flx-ido
-	workgroups
+	workgroups2
 	projectile
 	magit
 	ein
