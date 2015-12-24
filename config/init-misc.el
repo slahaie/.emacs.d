@@ -64,6 +64,12 @@
 ;(load-theme 'heroku t)
 ;(load-theme 'stekene-light t)
 
+;; smart/power line
+(setq sml/no-confirm-load-theme t)
+;;(setq sml/theme (quote smart-mode-line-light-powerline))
+(setq sml/theme 'light)
+(sml/setup)
+
 ;; markdown mode
 (autoload 'markdown-mode "markdown-mode"
    "Major mode for editing Markdown files" t)
