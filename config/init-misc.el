@@ -72,6 +72,12 @@
 (add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
 (add-to-list 'auto-mode-alist '("README\\.md\\'" . gfm-mode))
 
+;; weather
+(require 'sunshine)
+(setq sunshine-location "06830,USA")
+(setq sunshine-appid "e7968552315ea82f58daf2e1ff9982b9")
+(setq sunshine-show-icons t)
+(setq sunshine-units (quote metric))
 
 ;; google scholar
 (setq gscholar-bibtex-default-source "Google Scholar")
