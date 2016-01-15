@@ -3,14 +3,14 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (elpy-enable)
 (elpy-use-ipython)
+(setq
+ python-shell-interpreter "C:\\Python27\\python.exe"
+ python-shell-interpreter-args
+ "-i C:\\Python27\\Scripts\\ipython-script.py")
 (setq elpy-rpc-backend "jedi")
-;; (setq python-shell-interpreter "C:\\python27\\python.exe"
-;;       python-shell-interpreter-args
-;;       "-i C:\\python27\\Scripts\\ipython-script.py console --pylab=qt")
 (eval-after-load 'elpy
   '(progn
      (define-key elpy-mode-map (kbd "M-,") 'pop-tag-mark)))
-
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;; emacs iptyhon notebook
