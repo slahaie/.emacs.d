@@ -8,9 +8,11 @@
  python-shell-interpreter-args
  "-i C:\\Python27\\Scripts\\ipython-script.py")
 (setq elpy-rpc-backend "jedi")
+(setq elpy-test-runner 'elpy-test-pytest-runner)
 (eval-after-load 'elpy
   '(progn
      (define-key elpy-mode-map (kbd "M-,") 'pop-tag-mark)))
+
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;; emacs iptyhon notebook
