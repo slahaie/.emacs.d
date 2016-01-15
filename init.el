@@ -20,6 +20,7 @@
 	autopair
 	auto-complete
 	flycheck
+	py-autopep8
 	jedi
 	fill-column-indicator
 	smooth-scrolling

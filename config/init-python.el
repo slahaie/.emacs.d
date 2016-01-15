@@ -12,6 +12,11 @@
 (eval-after-load 'elpy
   '(progn
      (define-key elpy-mode-map (kbd "M-,") 'pop-tag-mark)))
+(require 'py-autopep8)
+(add-hook 'elpy-mode-hook 'py-autopep8-enable-on-save)
+(when (require 'flycheck nil t)
+  (setq elpy-modules (delq 'elpy-module-flymake elpy-modules))
+  (add-hook 'elpy-mode-hook 'flycheck-mode))
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
