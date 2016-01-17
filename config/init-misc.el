@@ -113,7 +113,7 @@
 
 ;; workgroups
 (require 'workgroups2)
-(setq wg-emacs-exit-save-behavior 'save)
+(setq wg-emacs-exit-save-behavior 'ask)
 (setq wg-prefix-key (kbd "C-z"))
 (setq wg-session-load-on-start nil)
 (setq wg-load-last-workgroup t)
