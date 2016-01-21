@@ -28,6 +28,9 @@
 (setq sentence-end-double-space nil)
 
 ;; window switching
+(defun prev-window ()
+  (interactive)
+  (other-window -1))
 (global-set-key (kbd "C-.") 'other-window)
 (global-set-key (kbd "C-,") 'prev-window)
 
@@ -37,9 +40,11 @@
 (global-set-key (kbd "M-k") 'next-line)
 (global-set-key (kbd "M-i") 'previous-line)
 
-(defun prev-window ()
-  (interactive)
-  (other-window -1))
+;; window resizing
+(global-set-key (kbd "<M-S-up>") 'shrink-window)
+(global-set-key (kbd "<M-S-down>") 'enlarge-window)
+(global-set-key (kbd "<M-S-left>") 'shrink-window-horizontally)
+(global-set-key (kbd "<M-S-right>") 'enlarge-window-horizontally)
 
 ;; magit status buffer
 (global-set-key (kbd "C-x g") 'magit-status)
