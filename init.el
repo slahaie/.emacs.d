@@ -31,6 +31,8 @@
 	ein
 	markdown-mode
 	smart-mode-line
+	auctex
+	auctex-latexmk
 	gscholar-bibtex
 	google-this
 	sunshine
