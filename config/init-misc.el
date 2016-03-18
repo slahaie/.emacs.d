@@ -124,3 +124,15 @@
 (setq wg-load-last-workgroup t)
 (workgroups-mode 1)
 (define-key workgroups-mode-map (kbd "C-z C-z") 'wg-reload-session)
+
+;; unfill paragraphs
+(defun unfill-paragraph ()
+  (interactive)
+  (let ((fill-column (point-max)))
+    (fill-paragraph nil)))
+
+(defun unfill-region ()
+  (interactive)
+  (let ((fill-column (point-max)))
+    (fill-region (region-beginning) (region-end) nil)))
+
