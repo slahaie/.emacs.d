@@ -7,9 +7,9 @@
  (delete-other-windows)
  (split-window-horizontally) ;; -> |
  (next-multiframe-window)
- (find-file "~/Projects/projects.org")
+ (find-file "~/Dropbox/projects.org")
  (next-multiframe-window)
- (find-file "~/Projects/gtd.org")
+ (find-file "~/Dropbox/gtd.org")
  (next-multiframe-window)
 )
 ;; execute the layout
