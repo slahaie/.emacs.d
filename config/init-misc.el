@@ -15,6 +15,12 @@
 ;; execute the layout
 (my-startup-layout)
 
+;; mac key bindings
+(when (eq system-type 'darwin) ;; mac specific settings
+  (setq mac-option-modifier 'control)
+  (setq mac-command-modifier 'meta)
+  )
+
 ;; flx ido
 (require 'flx-ido)
 (ido-mode 1)
