@@ -7,9 +7,9 @@
  (delete-other-windows)
  (split-window-horizontally) ;; -> |
  (next-multiframe-window)
- (find-file "~/Dropbox/GTD/projects.org")
+ (find-file "~/Projects/projects.org")
  (next-multiframe-window)
- (find-file "~/Dropbox/GTD/gtd.org")
+ (find-file "~/Projects/gtd.org")
  (next-multiframe-window)
 )
 ;; execute the layout
@@ -117,13 +117,16 @@
 (add-hook 'emacs-lisp-mode-hook 'remove-dos-eol)
 
 ;; workgroups
-(require 'workgroups2)
-(setq wg-emacs-exit-save-behavior 'ask)
-(setq wg-prefix-key (kbd "C-z"))
-(setq wg-session-load-on-start nil)
-(setq wg-load-last-workgroup t)
-(workgroups-mode 1)
-(define-key workgroups-mode-map (kbd "C-z C-z") 'wg-reload-session)
+;; (require 'workgroups2)
+;; (setq wg-emacs-exit-save-behavior 'ask)
+;; (setq wg-prefix-key (kbd "C-z"))
+;; (setq wg-session-load-on-start nil)
+;; (setq wg-load-last-workgroup t)
+;; (workgroups-mode 1)
+;; (define-key workgroups-mode-map (kbd "C-z C-z") 'wg-reload-session)
+
+;; perspective
+(persp-mode 1)
 
 ;; unfill paragraphs
 (defun unfill-paragraph ()
@@ -136,3 +139,17 @@
   (let ((fill-column (point-max)))
     (fill-region (region-beginning) (region-end) nil)))
 
+;; SQL mode
+(setq sql-product 'mysql)
+(eval-after-load "sql"
+  '(load-library "sql-indent"))
+(setq sql-indent-offset 2)
+(setq sql-indent-first-column-regexp
+   "^\\s-*\\(--\\|create\\|d\\(?:elete\\|rop\\)\\|from\\|group\\|having\\|in\\(?:sert\\|t\\(?:ersect\\|o\\)\\)\\|order\\|define\\|se\\(?:\\(?:lec\\)?t\\)\\|truncate\\|u\\(?:nion\\|pdate\\)\\|where\\)\\(\\b\\|\\s-\\)")
+(add-hook 'sql-mode-hook 'sqlup-mode)
+(add-hook 'sql-interactive-mode-hook 'sqlup-mode)
+(global-set-key (kbd "C-c u") 'sqlup-capitalize-keywords-in-region)
+(font-lock-add-keywords 'sql-mode
+			'(("define" . font-lock-keyword-face)
+			  ("macro" . font-lock-keyword-face)
+			  ("export" . font-lock-keyword-face)))
